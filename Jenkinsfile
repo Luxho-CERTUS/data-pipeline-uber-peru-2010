@@ -8,6 +8,12 @@ pipeline {
             }
         }
 
+        stage('Debug') {
+            steps {
+                bat 'dir'
+            }
+        }
+
         stage('Preparar') {
             steps {
                 bat '"C:\\Users\\Luis Sanchez\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install -r requirements.txt'
