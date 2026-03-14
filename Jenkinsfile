@@ -2,21 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Clean Workspace') {
+        stage('Checkout') {
             steps {
-                deleteDir()
-            }
-        }
-
-        stage('Debug') {
-            steps {
-                bat 'dir'
+                checkout scm
             }
         }
 
         stage('Preparar') {
             steps {
                 bat '"C:\\Users\\Luis Sanchez\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install -r requirements.txt'
+            }
+        }
+
+        stage('Debug') {
+            steps {
+                bat 'dir'
             }
         }
 
