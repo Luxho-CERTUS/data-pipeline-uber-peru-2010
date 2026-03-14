@@ -22,19 +22,19 @@ pipeline {
 
         stage('READ DATA') {
             steps {
-                bat 'python scripts/data_read.py'
+                bat '"C:\\Users\\Luis Sanchez\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" scripts/data_read.py'
             }
         }
 
         stage('TRANSFORM DATA') {
             steps {
-                bat 'python scripts/data_transform.py'
+                bat '"C:\\Users\\Luis Sanchez\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" scripts/data_transform.py'
             }
         }
 
         stage('EXPORT DATA') {
             steps {
-                bat 'python scripts/data_export.py'
+                bat '"C:\\Users\\Luis Sanchez\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" scripts/data_export.py'
             }
         }
     }
