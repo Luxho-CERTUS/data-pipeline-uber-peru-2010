@@ -10,8 +10,7 @@ pipeline {
 
         stage('Preparar') {
             steps {
-                bat 'python -m pip install pandas'
-                bat 'python -m pip install openpyxl'
+                bat 'pip install -r requirements.txt'
             }
         }
 
