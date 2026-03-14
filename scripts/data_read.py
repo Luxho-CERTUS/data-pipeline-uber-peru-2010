@@ -1,8 +1,11 @@
 import pandas as pd
+import os
 
 archivo_csv = '../data/uber_peru_2010.csv'
 
 try:
+    os.makedirs('../output', exist_ok=True)
+
     data = pd.read_csv(archivo_csv, delimiter=";")
 
     print("Datos cargados correctamente")

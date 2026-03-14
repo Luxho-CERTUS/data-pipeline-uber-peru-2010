@@ -1,8 +1,10 @@
 import pandas as pd
+import os
 
 archivo_csv = '../output/uber_transform.csv'
 
 try:
+    os.makedirs('../output', exist_ok=True)
 
     data = pd.read_csv(archivo_csv)
 
