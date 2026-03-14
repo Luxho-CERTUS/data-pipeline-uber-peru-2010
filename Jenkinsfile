@@ -20,12 +20,6 @@ pipeline {
             }
         }
 
-        stage('Debug') {
-            steps {
-                bat 'dir'
-            }
-        }
-
         stage('READ DATA') {
             steps {
                 bat '"C:\\Users\\Luis Sanchez\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" scripts/data_read.py'
