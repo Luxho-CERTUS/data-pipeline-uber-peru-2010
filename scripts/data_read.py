@@ -1,6 +1,6 @@
 import pandas as pd
 
-archivo_csv = 'uber_peru_2010.csv'
+archivo_csv = '../data/uber_peru_2010.csv'
 
 try:
     data = pd.read_csv(archivo_csv, delimiter=";")
@@ -8,7 +8,7 @@ try:
     print("Datos cargados correctamente")
     print(data.head())
 
-    archivo_salida = 'output/uber_clean.csv'
+    archivo_salida = '../output/uber_clean.csv'
     data.to_csv(archivo_salida, index=False)
 
     print(f"Datos guardados en {archivo_salida}")

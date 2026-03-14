@@ -1,6 +1,6 @@
 import pandas as pd
 
-archivo_csv = 'output/uber_clean.csv'
+archivo_csv = '../output/uber_clean.csv'
 
 try:
 
@@ -27,7 +27,7 @@ try:
     # ordenar por duración del viaje
     data = data.sort_values(by='trip_duration_minutes', ascending=False)
 
-    archivo_transform = 'output/uber_transform.csv'
+    archivo_transform = '../output/uber_transform.csv'
     data.to_csv(archivo_transform, index=False)
 
     print("Transformación completada")
